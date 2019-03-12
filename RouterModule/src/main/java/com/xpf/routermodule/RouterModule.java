@@ -3,6 +3,7 @@ package com.xpf.routermodule;
 import android.app.Application;
 
 import com.alibaba.android.arouter.launcher.ARouter;
+import com.xpf.basemodule.BaseModule;
 
 /**
  * Created by x-sir on 2019/3/12 :)
@@ -31,5 +32,8 @@ public class RouterModule {
 
         // As early as possible, it is recommended to initialize in the Application
         ARouter.init(application);
+
+        // 初始化 BaseModule
+        BaseModule.init(isDebug);
     }
 }

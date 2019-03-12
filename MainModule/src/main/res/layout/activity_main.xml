@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.xpf.mainmodule.MainActivity">
+
+    <Button
+        android:id="@+id/btnModule1Page1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Module1-Test1Activity"
+        android:textAllCaps="false"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnModule1Page2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Module1-Test2Activity"
+        android:textAllCaps="false"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnModule1Page1" />
+
+    <Button
+        android:id="@+id/btnModule2Page1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Module2-Test1Activity"
+        android:textAllCaps="false"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnModule1Page2" />
+
+    <Button
+        android:id="@+id/btnModule2Page2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Module2-Test2Activity"
+        android:textAllCaps="false"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnModule2Page1" />
+
+</android.support.constraint.ConstraintLayout>

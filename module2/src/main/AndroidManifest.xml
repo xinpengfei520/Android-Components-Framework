@@ -4,8 +4,11 @@
 
     <application>
         <activity
-            android:name=".Module2Activity"
-            android:label="Module2Activity" />
+            android:name=".test1.view.Test1Activity"
+            android:label="Test1Activity" />
+        <activity
+            android:name=".test2.view.Test2Activity"
+            android:label="Test2Activity" />
     </application>
 
 </manifest>

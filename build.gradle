@@ -30,17 +30,20 @@ buildscript {
         supportLibrary = "27.1.1"
 
         dependencies = [
-                "junit"            : 'junit:junit:4.12',
-                "test_runner"      : "com.android.support.test:runner:1.0.2",
-                "test_espresso"    : "com.android.support.test.espresso:espresso-core:3.0.2",
-                "multidex"         : "com.android.support:multidex:1.0.1",
-                "constraint_layout": "com.android.support.constraint:constraint-layout:1.1.3",
-                "recyclerview"     : "com.android.support:recyclerview-v7:${supportLibrary}",
-                "suppoutDesign"    : "com.android.support:design:${supportLibrary}",
-                "cardview"         : "com.android.support:cardview-v7:${supportLibrary}",
-                "appcompat_v7"     : "com.android.support:appcompat-v7:${supportLibrary}",
+                "junit"               : 'junit:junit:4.12',
+                "test_runner"         : "com.android.support.test:runner:1.0.2",
+                "test_espresso"       : "com.android.support.test.espresso:espresso-core:3.0.2",
+                "multidex"            : "com.android.support:multidex:1.0.1",
+                "constraint_layout"   : "com.android.support.constraint:constraint-layout:1.1.3",
+                "recyclerview"        : "com.android.support:recyclerview-v7:${supportLibrary}",
+                "suppoutDesign"       : "com.android.support:design:${supportLibrary}",
+                "cardview"            : "com.android.support:cardview-v7:${supportLibrary}",
+                "appcompat_v7"        : "com.android.support:appcompat-v7:${supportLibrary}",
 
-                "arouter_compiler" : "com.alibaba:arouter-compiler:1.2.2"
+                "arouter_compiler"    : "com.alibaba:arouter-compiler:1.2.2",
+                "logger"              : "com.orhanobut:logger:2.2.0",
+                "butterknife"         : "com.jakewharton:butterknife:8.4.0",
+                "butterknife_compiler": "com.jakewharton:butterknife-compiler:8.4.0"
         ]
 
         ext.multidex = '1.0.2'
@@ -60,6 +63,7 @@ buildscript {
     dependencies {
         classpath 'com.android.tools.build:gradle:3.2.0'
         classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8' // 路由需要
+        classpath 'com.jakewharton:butterknife-gradle-plugin:8.4.0'// 添加 ButterKnife 插件的引用
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files

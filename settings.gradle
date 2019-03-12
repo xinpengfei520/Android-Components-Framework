@@ -1,1 +1,1 @@
-include ':app', ':module1', ':module2', ':RouterModule', ':LibraryModule', ':BaseModule'
+include ':app', ':module1', ':module2', ':RouterModule', ':LibraryModule', ':BaseModule', ':MainModule'
