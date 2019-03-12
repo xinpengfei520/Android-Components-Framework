@@ -25,14 +25,11 @@ android {
 }
 
 dependencies {
-    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation rootProject.ext.dependencies.appcompat_v7
     testImplementation rootProject.ext.dependencies.junit
     androidTestImplementation rootProject.ext.dependencies.test_runner
     androidTestImplementation rootProject.ext.dependencies.test_espresso
-    api('com.alibaba:arouter-api:1.4.1', {
-        exclude group: "com.android.support"
-    })
-    // 依赖基础组件库
-    api project(':BaseModule')
+    // 依赖管理所有第三方库的 Module
+    api project(':LibraryModule')
 }
