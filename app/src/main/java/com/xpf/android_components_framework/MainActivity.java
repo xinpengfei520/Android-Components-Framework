@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.alibaba.android.arouter.launcher.ARouter;
+import com.xpf.routermodule.PathConstants;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -47,10 +48,10 @@ public class MainActivity extends AppCompatActivity {
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.btnModule1Page:
-                jumpToActivity("/module1/Module1Activity");
+                jumpToActivity(PathConstants.MODULE1_MODULE1ACTIVITY);
                 break;
             case R.id.btnModule2Page:
-                jumpToActivity("/module2/Module2Activity");
+                jumpToActivity(PathConstants.MODULE2_MODULE2ACTIVITY);
                 break;
             default:
                 break;

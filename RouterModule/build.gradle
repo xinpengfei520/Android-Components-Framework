@@ -1,10 +1,9 @@
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
 
 android {
 
     compileSdkVersion rootProject.compileSdkVersion
     defaultConfig {
-        applicationId rootProject.ext.applicationId.app
         minSdkVersion rootProject.minSdkVersion
         targetSdkVersion rootProject.targetSdkVersion
         versionCode rootProject.versionCode
@@ -23,29 +22,15 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
-    }
 }
 
 dependencies {
-    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation rootProject.ext.dependencies.appcompat_v7
-    implementation rootProject.ext.dependencies.constraint_layout
     testImplementation rootProject.ext.dependencies.junit
     androidTestImplementation rootProject.ext.dependencies.test_runner
     androidTestImplementation rootProject.ext.dependencies.test_espresso
-
-    implementation('com.jakewharton:butterknife:8.8.1', {
+    api('com.alibaba:arouter-api:1.4.1', {
         exclude group: "com.android.support"
     })
-    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
-
-    implementation project(':RouterModule')
-    //annotationProcessor rootProject.ext.dependencies.arouter_compiler
-
-    implementation project(':module1')
-    implementation project(':module2')
 }
