@@ -30,4 +30,5 @@ dependencies {
     api(rootProject.ext.dependencies.butterknife, {
         exclude group: "com.android.support"
     })
+    api "com.tencent.bugly:crashreport_upgrade:latest.release"
 }

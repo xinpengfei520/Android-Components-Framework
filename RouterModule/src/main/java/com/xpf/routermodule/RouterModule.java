@@ -3,6 +3,7 @@ package com.xpf.routermodule;
 import android.app.Application;
 
 import com.alibaba.android.arouter.launcher.ARouter;
+import com.tencent.bugly.crashreport.CrashReport;
 import com.xpf.basemodule.BaseModule;
 
 /**
@@ -35,5 +36,14 @@ public class RouterModule {
 
         // 初始化 BaseModule
         BaseModule.init(isDebug);
+
+        /*
+         * 第三个参数为 SDK 调试模式开关，调试模式的行为特性如下：
+         * 输出详细的 Bugly SDK 的 Log；
+         * 每一条 Crash 都会被立即上报；
+         * 自定义日志将会在 Logcat 中输出。
+         * 建议在测试阶段建议设置成 true，发布时设置为 false
+         */
+        CrashReport.initCrashReport(application, "73a8058df1", isDebug);
     }
 }
