@@ -40,7 +40,9 @@ dependencies {
     androidTestImplementation rootProject.ext.dependencies.test_espresso
 
     implementation project(':RouterModule')
-    implementation project(':MainModule')
-    implementation project(':module1')
-    implementation project(':module2')
+    if (!isModuleRun.toBoolean()) {
+        implementation project(':MainModule')
+        implementation project(':module1')
+        implementation project(':module2')
+    }
 }

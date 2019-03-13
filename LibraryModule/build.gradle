@@ -26,6 +26,9 @@ dependencies {
     androidTestImplementation rootProject.ext.dependencies.test_runner
     androidTestImplementation rootProject.ext.dependencies.test_espresso
 
+    api('com.alibaba:arouter-api:1.4.1', {
+        exclude group: "com.android.support"
+    })
     api rootProject.ext.dependencies.logger
     api(rootProject.ext.dependencies.butterknife, {
         exclude group: "com.android.support"

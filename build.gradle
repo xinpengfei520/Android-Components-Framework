@@ -4,26 +4,18 @@ buildscript {
 
     // 使用这种统一的依赖定义，IDE 会主动提示版本升级，如果放在 config.gradle IDE 就不会主动提示版本升级
     ext {
-        isModule = true
-        moduleShopMall = true
-        moduleShopCart = true
-        moduleWelfare = true
-        moduleCommonUi = true
-
         ext.compileSdkVersion = 27
         ext.minSdkVersion = 19
         ext.targetSdkVersion = 27
         ext.versionCode = 1
         ext.versionName = "1.0.0"
-        //ext.applicationId = "com.xpf.android_components_framework"
         ext.supportLibrary = "27.1.1"
 
         applicationId = [
-                "app"  : "com.xpf.android_components_framework",
-                "goods": "com.wustor.goodsmoudle",
-                "cart" : "com.wustor.cartmoudle",
-                "order": "com.wustor.ordermoudle",
-                "user" : "com.wustor.usermoudle"
+                "app"        : "com.xpf.android_components_framework",
+                "module1"    : "com.xpf.module1",
+                "module2"    : "com.xpf.module2",
+                "main_module": "com.xpf.mainmodule",
         ]
 
         // Version
@@ -61,9 +53,10 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.2.0'
+        // 这里只能用 3.0.1 版本，高版本和 butterknife 插件有冲突，在单独 module 运行时会找不到 R2 文件
+        classpath 'com.android.tools.build:gradle:3.0.1'
         classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8' // 路由需要
-        classpath 'com.jakewharton:butterknife-gradle-plugin:8.4.0'// 添加 ButterKnife 插件的引用
+        classpath 'com.jakewharton:butterknife-gradle-plugin:8.4.0' // 添加 ButterKnife 插件的引用
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
@@ -74,6 +67,9 @@ allprojects {
     repositories {
         google()
         jcenter()
+        mavenCentral()
+        maven { url "https://jitpack.io" }
+        maven { url "https://clojars.org/repo/" }
     }
 }
 

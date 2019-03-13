@@ -1,12 +1,13 @@
-package com.xpf.android_components_framework;
+package com.xpf.module1.debug;
 
 import com.xpf.basemodule.BaseApplication;
+import com.xpf.module1.BuildConfig;
 
 /**
- * Created by x-sir on 2019/3/11 :)
+ * Created by x-sir on 2019/3/13 :)
  * Function:
  */
-public class MyApplication extends BaseApplication {
+public class Module1Application extends BaseApplication {
 
     @Override
     public void onCreate() {
