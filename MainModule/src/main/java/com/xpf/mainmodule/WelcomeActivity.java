@@ -1,4 +1,4 @@
-package com.xpf.android_components_framework;
+package com.xpf.mainmodule;
 
 import android.os.Handler;
 import android.os.Looper;
