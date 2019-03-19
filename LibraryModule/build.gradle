@@ -30,6 +30,7 @@ dependencies {
         exclude group: "com.android.support"
     })
     api rootProject.ext.dependencies.logger
+    api rootProject.ext.dependencies.glide
     api(rootProject.ext.dependencies.butterknife, {
         exclude group: "com.android.support"
     })
